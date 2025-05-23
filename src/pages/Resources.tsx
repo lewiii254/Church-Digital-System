@@ -1,13 +1,15 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Book, Download, FileText, ExternalLink, Search, Globe, Calendar, BookOpen } from 'lucide-react';
 import { Input } from '@/components/ui/input';
+import Navigation from '@/components/Navigation';
 
 const Resources = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-amber-50">
+      <Navigation />
+      
       {/* Header */}
       <div className="bg-blue-700 text-white py-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
@@ -317,10 +319,7 @@ const Resources = () => {
                   <strong>Mere Christianity</strong> by C.S. Lewis
                 </li>
                 <li className="text-gray-700">
-                  <strong>Celebration of Discipline</strong> by Richard Foster
-                </li>
-                <li className="text-gray-700">
-                  <strong>The Case for Christ</strong> by Lee Strobel
+                  <strong>My Utmost for His Highest</strong> by Oswald Chambers
                 </li>
               </ul>
             </div>

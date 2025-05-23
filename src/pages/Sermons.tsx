@@ -1,8 +1,8 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Play, Download, Calendar, Search, Filter } from 'lucide-react';
 import { Input } from '@/components/ui/input';
+import Navigation from '@/components/Navigation';
 
 const Sermons = () => {
   const sermons = [
@@ -64,6 +64,8 @@ const Sermons = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-amber-50">
+      <Navigation />
+      
       {/* Header */}
       <div className="bg-blue-700 text-white py-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
