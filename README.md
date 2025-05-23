@@ -1,73 +1,247 @@
-# Welcome to your Lovable project
 
-## Project info
+# ⛪ Wonders of God Church - Digital Sanctuary
 
-**URL**: https://lovable.dev/projects/b4981621-441c-40b5-a000-6fdd1ab04060
+[![React](https://img.shields.io/badge/React-18.3.1-blue?logo=react)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.0-38B2AC?logo=tailwind-css)](https://tailwindcss.com/)
+[![Vite](https://img.shields.io/badge/Vite-5.0-646CFF?logo=vite)](https://vitejs.dev/)
 
-## How can I edit this code?
+> 🙏 A modern, responsive digital platform for Wonders of God Church, connecting our community through faith, worship, and fellowship.
 
-There are several ways of editing your application.
+## 🌟 Features
 
-**Use Lovable**
+### ✅ Current Features
+- 🏠 **Homepage** - Welcome visitors with inspiring content and church information
+- 📖 **About Us** - Learn about our church's mission, vision, and values
+- 🎥 **Sermons & Media** - Watch and download our latest messages and audio content
+- 📅 **Events** - Stay updated with upcoming church events and activities
+- 🤝 **Ministries** - Discover various ministry opportunities and get involved
+- 💰 **Give** - Secure online giving platform for tithes and offerings
+- 📞 **Contact** - Get in touch with church leadership and staff
+- 📚 **Resources** - Access spiritual resources, study materials, and downloads
+- 📱 **Responsive Design** - Fully optimized for mobile, tablet, and desktop
+- 🎨 **Modern UI/UX** - Clean, intuitive interface with beautiful animations
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/b4981621-441c-40b5-a000-6fdd1ab04060) and start prompting.
+### 🚀 Upcoming Features
+- 🔐 **Member Portal** - Secure login for church members
+- 📊 **Member Dashboard** - Personal spiritual growth tracking
+- 💬 **Prayer Requests** - Submit and track prayer requests
+- 📧 **Newsletter Subscription** - Stay connected with church updates
+- 🎵 **Worship Music Library** - Access to worship songs and lyrics
+- 📱 **Mobile App** - Native mobile application for iOS and Android
+- 🔔 **Push Notifications** - Real-time updates for events and announcements
+- 📖 **Bible Study Tools** - Interactive Bible reading and study features
+- 👥 **Small Groups** - Find and join small group communities
+- 🎓 **Online Classes** - Virtual Bible study and discipleship courses
+- 💳 **Recurring Donations** - Set up automatic giving schedules
+- 🌍 **Multi-language Support** - Swahili and English language options
+- 🎯 **Event Registration** - Online registration for church events
+- 📸 **Photo Gallery** - Church event photos and memories
+- 🎬 **Live Streaming** - Watch services live online
+- 📊 **Analytics Dashboard** - Church leadership insights and statistics
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🛠️ Technology Stack
 
-**Use your preferred IDE**
+| Technology | Purpose | Version |
+|-----------|---------|---------|
+| ⚛️ **React** | Frontend Framework | 18.3.1 |
+| 🔷 **TypeScript** | Type Safety | 5.0+ |
+| 🎨 **Tailwind CSS** | Styling Framework | 3.0+ |
+| ⚡ **Vite** | Build Tool | 5.0+ |
+| 🧩 **Shadcn/UI** | Component Library | Latest |
+| 🔍 **Lucide React** | Icon Library | 0.462.0 |
+| 🌐 **React Router** | Navigation | 6.26.2 |
+| 🔄 **TanStack Query** | Data Fetching | 5.56.2 |
+| 📊 **Recharts** | Data Visualization | 2.12.7 |
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🚀 Quick Start
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Prerequisites
+- 📦 **Node.js** (version 18.0 or higher)
+- 📋 **npm** or **yarn** package manager
+- 💻 **Git** for version control
 
-Follow these steps:
+### 📥 Installation
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/wonders-of-god-church.git
+   cd wonders-of-god-church
+   ```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-# Step 3: Install the necessary dependencies.
-npm i
+3. **Start development server**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+4. **Open your browser**
+   ```
+   http://localhost:5173
+   ```
+
+## 🔧 Development Scripts
+
+| Command | Description | Icon |
+|---------|-------------|------|
+| `npm run dev` | Start development server | 🚀 |
+| `npm run build` | Build for production | 🏗️ |
+| `npm run preview` | Preview production build | 👀 |
+| `npm run lint` | Run ESLint | 🧹 |
+| `npm run type-check` | Run TypeScript checks | 🔍 |
+
+## 🌐 Deployment
+
+### 🚀 Deploy with Lovable
+1. Open your project in [Lovable](https://lovable.dev)
+2. Click the **Publish** button
+3. Your site will be live at `your-project.lovable.app`
+
+### 🔗 Custom Domain Setup
+1. Navigate to **Project > Settings > Domains**
+2. Click **Connect Domain**
+3. Follow the DNS configuration instructions
+4. Verify domain ownership
+
+### 📦 Deploy to Other Platforms
+
+#### **Vercel** 🔺
+```bash
+npm install -g vercel
+vercel --prod
 ```
 
-**Edit a file directly in GitHub**
+#### **Netlify** 🌐
+```bash
+npm run build
+# Upload dist/ folder to Netlify
+```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+#### **GitHub Pages** 📚
+```bash
+npm run build
+# Push dist/ folder to gh-pages branch
+```
 
-**Use GitHub Codespaces**
+## 📁 Project Structure
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```
+src/
+├── 📂 components/          # Reusable UI components
+│   ├── 🧩 ui/             # Shadcn/UI components
+│   ├── 🧭 Navigation.tsx  # Main navigation component
+│   └── ...
+├── 📂 pages/              # Page components
+│   ├── 🏠 Index.tsx       # Homepage
+│   ├── 📖 About.tsx       # About page
+│   ├── 🎥 Sermons.tsx     # Sermons page
+│   └── ...
+├── 📂 hooks/              # Custom React hooks
+├── 📂 lib/                # Utility functions
+├── 📂 types/              # TypeScript type definitions
+└── 📄 App.tsx             # Main app component
+```
 
-## What technologies are used for this project?
+## 🎨 Customization
 
-This project is built with:
+### 🎨 Colors and Branding
+Customize the church branding in `tailwind.config.ts`:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+```typescript
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        primary: '#your-primary-color',
+        secondary: '#your-secondary-color',
+      }
+    }
+  }
+}
+```
 
-## How can I deploy this project?
+### 📝 Content Management
+Update church information in the respective page components:
+- Church name and details in `Navigation.tsx`
+- Service times in `ServiceTimes.tsx`
+- Pastor information in sermon components
 
-Simply open [Lovable](https://lovable.dev/projects/b4981621-441c-40b5-a000-6fdd1ab04060) and click on Share -> Publish.
+## 🤝 Contributing
 
-## Can I connect a custom domain to my Lovable project?
+We welcome contributions from our church community! 🙌
 
-Yes, you can!
+### 🛠️ How to Contribute
+1. **Fork** the repository 🍴
+2. **Create** a feature branch 🌿
+   ```bash
+   git checkout -b feature/amazing-feature
+   ```
+3. **Commit** your changes 💾
+   ```bash
+   git commit -m 'Add some amazing feature'
+   ```
+4. **Push** to the branch 📤
+   ```bash
+   git push origin feature/amazing-feature
+   ```
+5. **Open** a Pull Request 🔄
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+### 📋 Contribution Guidelines
+- ✅ Follow the existing code style
+- ✅ Write meaningful commit messages
+- ✅ Test your changes thoroughly
+- ✅ Update documentation as needed
+- ✅ Respect the church's values and mission
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## 🙏 Support and Prayer
+
+### 💬 Getting Help
+- 📧 **Email**: tech@wondersofgodchurch.org
+- 💬 **Discord**: [Join our community](https://discord.gg/church)
+- 📞 **Phone**: +254 XXX XXX XXX
+- 🕐 **Office Hours**: Monday - Friday, 9 AM - 5 PM EAT
+
+### 🙏 Prayer Requests
+If you need prayer or spiritual support:
+- 📧 **Prayer Email**: prayer@wondersofgodchurch.org
+- 📞 **Prayer Hotline**: +254 XXX XXX XXX (24/7)
+
+## 📜 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- 🙏 **God Almighty** - For His grace and guidance
+- ⛪ **Wonders of God Church Community** - For their support and feedback
+- 👨‍💻 **Development Team** - For their dedication and hard work
+- 🎨 **UI/UX Designers** - For creating beautiful and intuitive designs
+- 📚 **Open Source Community** - For the amazing tools and libraries
+
+## 📊 Project Stats
+
+![GitHub last commit](https://img.shields.io/github/last-commit/username/wonders-of-god-church)
+![GitHub issues](https://img.shields.io/github/issues/username/wonders-of-god-church)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/username/wonders-of-god-church)
+![GitHub stars](https://img.shields.io/github/stars/username/wonders-of-god-church)
+
+---
+
+<div align="center">
+
+### 🌟 "For where two or three gather in my name, there am I with them." - Matthew 18:20 🌟
+
+**Made with ❤️ and 🙏 for the Glory of God**
+
+[🌐 Visit Our Website](https://wondersofgodchurch.org) | [📧 Contact Us](mailto:info@wondersofgodchurch.org) | [🙏 Prayer Requests](mailto:prayer@wondersofgodchurch.org)
+
+</div>
+```
