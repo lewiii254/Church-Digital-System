@@ -2,10 +2,13 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Church, Heart, Users } from 'lucide-react';
+import Navigation from '@/components/Navigation';
 
 const About = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-amber-50">
+      <Navigation />
+      
       {/* Header */}
       <div className="bg-blue-700 text-white py-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
