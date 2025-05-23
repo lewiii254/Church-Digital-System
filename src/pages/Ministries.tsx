@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { Users, Heart, Church, Book, Music, Child, Globe, Landmark, Calendar } from 'lucide-react';
+import { Users, Heart, Church, Book, Music, Baby, Globe, Landmark, Calendar } from 'lucide-react';
 
 const Ministries = () => {
   const ministries = [
@@ -37,7 +37,7 @@ const Ministries = () => {
       title: "Children's Ministry",
       subtitle: "Nurturing young faith",
       description: "Our Children's Ministry creates fun, engaging, and age-appropriate environments where children can learn about God's love. Through interactive lessons, music, crafts, and games, we lay a foundation of faith that will last a lifetime.",
-      icon: Child,
+      icon: Baby,
       color: "green",
       image: "https://images.unsplash.com/photo-1536337005238-94b997371b40"
     },
