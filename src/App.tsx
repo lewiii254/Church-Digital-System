@@ -12,6 +12,7 @@ import Ministries from "./pages/Ministries";
 import Give from "./pages/Give";
 import Contact from "./pages/Contact";
 import Resources from "./pages/Resources";
+import Live from "./pages/Live";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/give" element={<Give />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/resources" element={<Resources />} />
+          <Route path="/live" element={<Live />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
