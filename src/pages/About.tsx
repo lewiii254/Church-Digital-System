@@ -24,7 +24,7 @@ const About = () => {
             <div>
               <h2 className="text-3xl font-bold text-gray-800 mb-6">Our Story</h2>
               <p className="text-gray-600 mb-4">
-                Wonders of God Church was founded in 1998 by Pastor James Mwangi with just 20 dedicated members. 
+                Wonders of God Church was founded in 1998 by Bishop Wilson Muchangi with just 20 dedicated members. 
                 What began as a small prayer group meeting in a school classroom has grown into a vibrant 
                 community of over 500 believers.
               </p>
@@ -141,15 +141,15 @@ const About = () => {
               <div className="h-80 overflow-hidden">
                 <img 
                   src="https://images.unsplash.com/photo-1556157382-97eda2d62296" 
-                  alt="Pastor James Mwangi" 
+                  alt="Bishop Wilson Muchangi" 
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-800">Pastor James Mwangi</h3>
+                <h3 className="text-xl font-bold text-gray-800">Bishop Wilson Muchangi</h3>
                 <p className="text-blue-600 mb-4">Senior Pastor</p>
                 <p className="text-gray-600">
-                  Pastor James has led our congregation for over 20 years with wisdom, 
+                  Bishop Wilson has led our congregation for over 20 years with wisdom, 
                   compassion, and an unwavering commitment to God's Word.
                 </p>
               </div>
