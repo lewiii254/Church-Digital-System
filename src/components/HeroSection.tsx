@@ -10,7 +10,7 @@ const HeroSection: React.FC = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center z-0" 
         style={{ 
-          backgroundImage: 'url(https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d)',
+          backgroundImage: 'url(/lovable-uploads/6c32a2d7-e360-413a-af3b-76e515cc15cc.png)',
           filter: 'brightness(0.7)'
         }}
       ></div>
