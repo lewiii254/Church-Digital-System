@@ -1,10 +1,14 @@
-import React from 'react';
+
+import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Play, Download, Calendar, Search, Filter } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import Navigation from '@/components/Navigation';
 
 const Sermons = () => {
+  const [featuredVideoPlaying, setFeaturedVideoPlaying] = useState(false);
+  const [playingVideoId, setPlayingVideoId] = useState<number | null>(null);
+
   const sermons = [
     {
       id: 1,
@@ -13,7 +17,8 @@ const Sermons = () => {
       date: "May 19, 2024",
       description: "Discover how to position yourself for God's supernatural favor in every area of your life.",
       image: "https://images.unsplash.com/photo-1447933601403-0c6688de566e",
-      tags: ["Faith", "Blessings", "Favor"]
+      tags: ["Faith", "Blessings", "Favor"],
+      youtubeId: "dQw4w9WgXcQ" // Rick Astley - Never Gonna Give You Up (popular example video)
     },
     {
       id: 2,
@@ -22,7 +27,8 @@ const Sermons = () => {
       date: "May 12, 2024",
       description: "Biblical strategies for facing and conquering the obstacles that stand in your path.",
       image: "https://images.unsplash.com/photo-1504052434569-70ad5836ab65",
-      tags: ["Challenges", "Victory", "Faith"]
+      tags: ["Challenges", "Victory", "Faith"],
+      youtubeId: "kJQP7kiw5Fk" // DeepMind: The YouTube video that started it all
     },
     {
       id: 3,
@@ -31,7 +37,8 @@ const Sermons = () => {
       date: "May 5, 2024",
       description: "Understanding how prayer connects us to God's power and transforms our circumstances.",
       image: "https://images.unsplash.com/photo-1545239352-8da131195f55",
-      tags: ["Prayer", "Spiritual Growth"]
+      tags: ["Prayer", "Spiritual Growth"],
+      youtubeId: "jNQXAC9IVRw" // Me at the zoo (first YouTube video)
     },
     {
       id: 4,
@@ -40,7 +47,8 @@ const Sermons = () => {
       date: "April 28, 2024",
       description: "Biblical principles for creating healthy, God-centered families in today's challenging world.",
       image: "https://images.unsplash.com/photo-1511895426328-dc8714191300",
-      tags: ["Family", "Relationships"]
+      tags: ["Family", "Relationships"],
+      youtubeId: "9bZkp7q19f0" // PSY - Gangnam Style
     },
     {
       id: 5,
@@ -49,7 +57,8 @@ const Sermons = () => {
       date: "April 21, 2024",
       description: "Discovering what it means to worship God in spirit and truth.",
       image: "https://images.unsplash.com/photo-1519750157634-b6d493a0f77c",
-      tags: ["Worship", "Devotion"]
+      tags: ["Worship", "Devotion"],
+      youtubeId: "fJ9rUzIMcZQ" // Queen - Bohemian Rhapsody
     },
     {
       id: 6,
@@ -58,9 +67,18 @@ const Sermons = () => {
       date: "April 14, 2024",
       description: "How to discover and fulfill God's unique purpose for your life.",
       image: "https://images.unsplash.com/photo-1501869150234-7205c5799153",
-      tags: ["Purpose", "Calling", "Vision"]
+      tags: ["Purpose", "Calling", "Vision"],
+      youtubeId: "L_jWHffIx5E" // Smosh - Shut Up!
     }
   ];
+
+  const handleFeaturedVideoPlay = () => {
+    setFeaturedVideoPlaying(true);
+  };
+
+  const handleVideoPlay = (sermonId: number) => {
+    setPlayingVideoId(sermonId);
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-amber-50">
@@ -80,21 +98,35 @@ const Sermons = () => {
           <h2 className="text-3xl font-bold text-center mb-12">This Week's Message</h2>
           <div className="bg-white shadow-xl rounded-lg overflow-hidden">
             <div className="aspect-w-16 aspect-h-9 relative">
-              <div className="absolute inset-0 bg-gray-800">
-                <img 
-                  src={sermons[0].image} 
-                  alt={sermons[0].title} 
-                  className="w-full h-full object-cover opacity-60"
-                />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <Button 
-                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full w-20 h-20 flex items-center justify-center"
-                    aria-label="Play sermon video"
-                  >
-                    <Play size={36} />
-                  </Button>
+              {featuredVideoPlaying ? (
+                <div className="w-full h-0 pb-[56.25%] relative">
+                  <iframe
+                    className="absolute top-0 left-0 w-full h-full"
+                    src={`https://www.youtube.com/embed/${sermons[0].youtubeId}?autoplay=1`}
+                    title={sermons[0].title}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
                 </div>
-              </div>
+              ) : (
+                <div className="absolute inset-0 bg-gray-800">
+                  <img 
+                    src={sermons[0].image} 
+                    alt={sermons[0].title} 
+                    className="w-full h-full object-cover opacity-60"
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <Button 
+                      className="bg-blue-600 hover:bg-blue-700 text-white rounded-full w-20 h-20 flex items-center justify-center"
+                      aria-label="Play sermon video"
+                      onClick={handleFeaturedVideoPlay}
+                    >
+                      <Play size={36} />
+                    </Button>
+                  </div>
+                </div>
+              )}
             </div>
             <div className="p-8">
               <div className="flex items-center mb-4">
@@ -111,7 +143,10 @@ const Sermons = () => {
                 ))}
               </div>
               <div className="flex flex-wrap gap-4">
-                <Button className="bg-blue-600 hover:bg-blue-700">
+                <Button 
+                  className="bg-blue-600 hover:bg-blue-700"
+                  onClick={handleFeaturedVideoPlay}
+                >
                   <Play className="mr-2 h-5 w-5" />
                   Watch Now
                 </Button>
@@ -167,16 +202,34 @@ const Sermons = () => {
             {sermons.slice(1).map(sermon => (
               <div key={sermon.id} className="bg-white rounded-lg shadow-md overflow-hidden">
                 <div className="h-48 relative">
-                  <img 
-                    src={sermon.image} 
-                    alt={sermon.title} 
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
-                    <Button className="bg-blue-600 hover:bg-blue-700 rounded-full w-12 h-12 flex items-center justify-center">
-                      <Play size={20} />
-                    </Button>
-                  </div>
+                  {playingVideoId === sermon.id ? (
+                    <div className="w-full h-full">
+                      <iframe
+                        className="w-full h-full"
+                        src={`https://www.youtube.com/embed/${sermon.youtubeId}?autoplay=1`}
+                        title={sermon.title}
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      ></iframe>
+                    </div>
+                  ) : (
+                    <>
+                      <img 
+                        src={sermon.image} 
+                        alt={sermon.title} 
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                        <Button 
+                          className="bg-blue-600 hover:bg-blue-700 rounded-full w-12 h-12 flex items-center justify-center"
+                          onClick={() => handleVideoPlay(sermon.id)}
+                        >
+                          <Play size={20} />
+                        </Button>
+                      </div>
+                    </>
+                  )}
                 </div>
                 <div className="p-6">
                   <div className="flex items-center mb-2 text-sm text-gray-500">
@@ -193,7 +246,12 @@ const Sermons = () => {
                     ))}
                   </div>
                   <div className="flex gap-2">
-                    <Button variant="outline" size="sm" className="flex items-center">
+                    <Button 
+                      variant="outline" 
+                      size="sm" 
+                      className="flex items-center"
+                      onClick={() => handleVideoPlay(sermon.id)}
+                    >
                       <Play className="mr-1 h-4 w-4" />
                       Watch
                     </Button>
