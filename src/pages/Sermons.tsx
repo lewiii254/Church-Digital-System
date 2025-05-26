@@ -13,22 +13,22 @@ const Sermons = () => {
     {
       id: 1,
       title: "Walking in Divine Favor",
-      pastor: "Pastor James Mwangi",
+      pastor: "Bishop Wilson Muchangi",
       date: "May 19, 2024",
       description: "Discover how to position yourself for God's supernatural favor in every area of your life.",
-      image: "https://images.unsplash.com/photo-1447933601403-0c6688de566e",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
       tags: ["Faith", "Blessings", "Favor"],
-      youtubeId: "dQw4w9WgXcQ" // Rick Astley - Never Gonna Give You Up (popular example video)
+      youtubeId: "dQw4w9WgXcQ"
     },
     {
       id: 2,
       title: "Overcoming Life's Challenges",
-      pastor: "Pastor James Mwangi",
+      pastor: "Bishop Wilson Muchangi",
       date: "May 12, 2024",
       description: "Biblical strategies for facing and conquering the obstacles that stand in your path.",
-      image: "https://images.unsplash.com/photo-1504052434569-70ad5836ab65",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
       tags: ["Challenges", "Victory", "Faith"],
-      youtubeId: "kJQP7kiw5Fk" // DeepMind: The YouTube video that started it all
+      youtubeId: "kJQP7kiw5Fk"
     },
     {
       id: 3,
@@ -36,9 +36,9 @@ const Sermons = () => {
       pastor: "Minister Faith Njoki",
       date: "May 5, 2024",
       description: "Understanding how prayer connects us to God's power and transforms our circumstances.",
-      image: "https://images.unsplash.com/photo-1545239352-8da131195f55",
+      image: "https://images.unsplash.com/photo-1594736797933-d0651ba42c6e",
       tags: ["Prayer", "Spiritual Growth"],
-      youtubeId: "jNQXAC9IVRw" // Me at the zoo (first YouTube video)
+      youtubeId: "jNQXAC9IVRw"
     },
     {
       id: 4,
@@ -46,9 +46,9 @@ const Sermons = () => {
       pastor: "Elder John Kiarie",
       date: "April 28, 2024",
       description: "Biblical principles for creating healthy, God-centered families in today's challenging world.",
-      image: "https://images.unsplash.com/photo-1511895426328-dc8714191300",
+      image: "https://images.unsplash.com/photo-1594736797933-d0651ba42c6e",
       tags: ["Family", "Relationships"],
-      youtubeId: "9bZkp7q19f0" // PSY - Gangnam Style
+      youtubeId: "9bZkp7q19f0"
     },
     {
       id: 5,
@@ -56,19 +56,19 @@ const Sermons = () => {
       pastor: "Minister Faith Njoki",
       date: "April 21, 2024",
       description: "Discovering what it means to worship God in spirit and truth.",
-      image: "https://images.unsplash.com/photo-1519750157634-b6d493a0f77c",
+      image: "https://images.unsplash.com/photo-1594736797933-d0651ba42c6e",
       tags: ["Worship", "Devotion"],
-      youtubeId: "fJ9rUzIMcZQ" // Queen - Bohemian Rhapsody
+      youtubeId: "fJ9rUzIMcZQ"
     },
     {
       id: 6,
       title: "Living with Purpose",
-      pastor: "Pastor James Mwangi",
+      pastor: "Bishop Wilson Muchangi",
       date: "April 14, 2024",
       description: "How to discover and fulfill God's unique purpose for your life.",
-      image: "https://images.unsplash.com/photo-1501869150234-7205c5799153",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
       tags: ["Purpose", "Calling", "Vision"],
-      youtubeId: "L_jWHffIx5E" // Smosh - Shut Up!
+      youtubeId: "L_jWHffIx5E"
     }
   ];
 

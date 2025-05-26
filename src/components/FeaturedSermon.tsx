@@ -9,11 +9,11 @@ const FeaturedSermon: React.FC = () => {
 
   const featuredSermon = {
     title: "Walking in Divine Favor",
-    pastor: "Pastor James Mwangi",
+    pastor: "Bishop Wilson Muchangi",
     date: "May 19, 2024",
     description: "Discover how to position yourself for God's supernatural favor in every area of your life. This powerful message explores biblical principles that unlock divine blessings and favor.",
-    image: "https://images.unsplash.com/photo-1447933601403-0c6688de566e",
-    youtubeId: "dQw4w9WgXcQ", // Rick Astley - Never Gonna Give You Up
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
+    youtubeId: "dQw4w9WgXcQ",
     tags: ["Faith", "Blessings", "Favor"]
   };
 
@@ -46,7 +46,7 @@ const FeaturedSermon: React.FC = () => {
                   <div className="absolute inset-0 bg-gray-800 flex items-center justify-center">
                     <img 
                       src={featuredSermon.image} 
-                      alt="Pastor preaching" 
+                      alt="Bishop preaching" 
                       className="w-full h-full object-cover opacity-80"
                     />
                     <div className="absolute inset-0 flex items-center justify-center">
