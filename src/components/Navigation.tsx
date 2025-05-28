@@ -31,6 +31,7 @@ const Navigation = () => {
             <Link to="/sermons" className="text-gray-700 hover:text-blue-600 transition-colors">Sermons</Link>
             <Link to="/events" className="text-gray-700 hover:text-blue-600 transition-colors">Events</Link>
             <Link to="/ministries" className="text-gray-700 hover:text-blue-600 transition-colors">Ministries</Link>
+            <Link to="/live" className="text-gray-700 hover:text-blue-600 transition-colors">Live</Link>
             <Link to="/give" className="text-gray-700 hover:text-blue-600 transition-colors">Give</Link>
             <Link to="/contact" className="text-gray-700 hover:text-blue-600 transition-colors">Contact</Link>
             <Link to="/resources" className="text-gray-700 hover:text-blue-600 transition-colors">Resources</Link>
@@ -86,6 +87,13 @@ const Navigation = () => {
                 onClick={closeMobileMenu}
               >
                 Ministries
+              </Link>
+              <Link 
+                to="/live" 
+                className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors"
+                onClick={closeMobileMenu}
+              >
+                Live
               </Link>
               <Link 
                 to="/give" 

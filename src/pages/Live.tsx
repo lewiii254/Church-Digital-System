@@ -1,11 +1,19 @@
 
-import React from 'react';
-import { Play, Users, Calendar, Clock } from 'lucide-react';
+import React, { useState } from 'react';
+import { Play, Users, Calendar, Clock, Pause, Volume2, Maximize } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 
 const Live = () => {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [isLive, setIsLive] = useState(true);
+  const [viewerCount, setViewerCount] = useState(342);
+
+  const togglePlay = () => {
+    setIsPlaying(!isPlaying);
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-amber-50">
       <Navigation />
@@ -22,21 +30,60 @@ const Live = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto">
           <div className="bg-black rounded-lg overflow-hidden shadow-xl mb-8">
-            {/* Video Player Placeholder */}
-            <div className="aspect-video bg-gray-900 flex items-center justify-center relative">
-              <div className="text-center text-white">
-                <Play className="h-20 w-20 mx-auto mb-4 text-red-500" />
-                <h3 className="text-2xl font-bold mb-2">Live Stream</h3>
-                <p className="text-lg text-gray-300 mb-6">Service starts at 8:00 AM & 10:30 AM (EAT)</p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button size="lg" className="bg-red-600 hover:bg-red-700">
-                    <Play className="mr-2 h-5 w-5" />
-                    Watch Live
-                  </Button>
-                  <Button variant="outline" size="lg" className="border-white text-white hover:bg-white/10">
-                    <Users className="mr-2 h-5 w-5" />
-                    Join Chat
-                  </Button>
+            {/* Video Player */}
+            <div className="aspect-video bg-gray-900 flex items-center justify-center relative group">
+              {/* Live indicator */}
+              {isLive && (
+                <div className="absolute top-4 left-4 z-20">
+                  <div className="bg-red-600 text-white px-3 py-1 rounded-full text-sm font-bold flex items-center">
+                    <div className="w-2 h-2 bg-white rounded-full mr-2 animate-pulse"></div>
+                    LIVE
+                  </div>
+                </div>
+              )}
+              
+              {/* Viewer count */}
+              <div className="absolute top-4 right-4 z-20">
+                <div className="bg-black/50 text-white px-3 py-1 rounded-full text-sm flex items-center">
+                  <Users className="w-4 h-4 mr-1" />
+                  {viewerCount} viewers
+                </div>
+              </div>
+
+              {/* Video content */}
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-900 to-purple-900"></div>
+              
+              {/* Play/Pause overlay */}
+              <div className="relative z-10 text-center text-white">
+                <button
+                  onClick={togglePlay}
+                  className="mb-4 bg-red-600 hover:bg-red-700 rounded-full p-6 transition-all duration-200 transform hover:scale-105"
+                >
+                  {isPlaying ? (
+                    <Pause className="h-12 w-12" />
+                  ) : (
+                    <Play className="h-12 w-12 ml-1" />
+                  )}
+                </button>
+                <h3 className="text-2xl font-bold mb-2">Sunday Morning Service</h3>
+                <p className="text-lg text-gray-300 mb-6">Bishop Wilson Muchangi - "Walking in Faith"</p>
+              </div>
+
+              {/* Video controls */}
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity z-10">
+                <div className="flex items-center justify-between text-white">
+                  <div className="flex items-center space-x-4">
+                    <button onClick={togglePlay} className="hover:scale-110 transition-transform">
+                      {isPlaying ? <Pause className="h-6 w-6" /> : <Play className="h-6 w-6" />}
+                    </button>
+                    <button className="hover:scale-110 transition-transform">
+                      <Volume2 className="h-6 w-6" />
+                    </button>
+                    <span className="text-sm">1:23:45 / LIVE</span>
+                  </div>
+                  <button className="hover:scale-110 transition-transform">
+                    <Maximize className="h-6 w-6" />
+                  </button>
                 </div>
               </div>
             </div>
