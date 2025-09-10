@@ -98,12 +98,6 @@
 | `npm run lint` | Run ESLint | 🧹 |
 | `npm run type-check` | Run TypeScript checks | 🔍 |
 
-## 🌐 Deployment
-
-### 🚀 Deploy with Lovable
-1. Open your project in [Lovable](https://lovable.dev)
-2. Click the **Publish** button
-3. Your site will be live at `your-project.lovable.app`
 
 ### 🔗 Custom Domain Setup
 1. Navigate to **Project > Settings > Domains**
@@ -200,14 +194,6 @@ We welcome contributions from our church community! 🙌
 - ✅ Test your changes thoroughly
 - ✅ Update documentation as needed
 - ✅ Respect the church's values and mission
-
-## 🙏 Support and Prayer
-
-### 💬 Getting Help
-- 📧 **Email**: tech@wondersofgodchurch.org
-- 💬 **Discord**: [Join our community](https://discord.gg/church)
-- 📞 **Phone**: +254 XXX XXX XXX
-- 🕐 **Office Hours**: Monday - Friday, 9 AM - 5 PM EAT
 
 ### 🙏 Prayer Requests
 If you need prayer or spiritual support:
